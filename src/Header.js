@@ -1,11 +1,14 @@
 import React from "react";
 import "./header.css";
 import SearchIcon from "@mui/icons-material/Search";
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { Link } from "react-router-dom";
 function Header(props) {
   return (
     <div className="header">
-      <img className="header_logo" src="./assets/logo.png" />
+      <Link to="/">
+        <img className="header_logo" src="./assets/logo.png" alt="" />
+      </Link>
       <div className="header_search">
         <input className="header_searchInput" type="text"></input>
         <SearchIcon className="header_searchIcon" />
@@ -24,10 +27,12 @@ function Header(props) {
           <span className="header_option2">& Prime</span>
         </div>
       </div>
-      <div className="header_optionBasket">
-        <ShoppingBasketIcon />
-        <span className="header_option2 header_bascketCount">0</span>
-      </div>
+      <Link to="/checkout">
+        <div className="header_optionBasket">
+          <ShoppingBasketIcon />
+          <span className="header_option2 header_bascketCount">0</span>
+        </div>
+      </Link>
     </div>
   );
 }
