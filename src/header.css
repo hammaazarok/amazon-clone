@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .header_logo {
@@ -59,7 +60,11 @@
   color: white;
 }
 
-.header_BasketCount {
+.header_bascketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
 }
