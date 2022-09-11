@@ -60,7 +60,11 @@
   color: white;
 }
 
-.header_BasketCount {
+.header_bascketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
 }
