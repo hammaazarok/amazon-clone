@@ -5,7 +5,11 @@ import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 
 const Subtotal = () => {
-    const [{basket}] = useStateValue();
+  const navigate = (e) => {
+    e.preventDefault();
+    window.location.href = '/payment';
+  };
+  const [{ basket }] = useStateValue();
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -25,7 +29,7 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button>Procced to Checkout</button>
+      <button onClick={navigate}>Procced to Checkout</button>
     </div>
   );
 };
