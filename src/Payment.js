@@ -7,9 +7,9 @@ import { useStateValue } from "./StateProvider";
 import axios from './axios'
 import { useNavigate } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
+
 function Payment() {
   
-  // pk_test_51LhJ6CC4y0LjrhI2Z0fTiHPeyLzVwpvp5fjE5o4glPBrC9bA0OeGZUOczcUq7I4gk9ZqApkVCvJGQq7Me5zNCQCQ00iagPWwPr
   const [{ basket, user }, dispatch] = useStateValue();
   const stripe = useStripe();
   const elements = useElements();
@@ -20,7 +20,6 @@ function Payment() {
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState(true);
-
   useEffect(() => {
       
       const getClientSecret = async () => {
@@ -34,7 +33,7 @@ function Payment() {
       getClientSecret();
   }, [basket])
 
-
+console.log(clientSecret);
   const handleSubmit = async (event) => {
      
       event.preventDefault();

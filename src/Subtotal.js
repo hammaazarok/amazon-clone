@@ -3,11 +3,13 @@ import "./subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { useNavigate } from "react-router-dom";
 
 const Subtotal = () => {
+  const navigator = useNavigate();
   const navigate = (e) => {
     e.preventDefault();
-    window.location.href = '/payment';
+    navigator('/payment');
   };
   const [{ basket }] = useStateValue();
   return (
