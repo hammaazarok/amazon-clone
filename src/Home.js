@@ -51,16 +51,16 @@ function Home() {
         <img className="home_banner" src="./assets/banner1.jpg" alt=""></img>
       </div>
       <div className="home_row">
-        <Product data={data[0]} />
-        <Product data={data[1]} />
+        <Product key='1' data={data[0]} />
+        <Product key='2' data={data[1]} />
       </div>
       <div className="home_row">
-        <Product data={data[2]} />
-        <Product data={data[3]} />
-        <Product data={data[4]} />
+        <Product key='3' data={data[2]} />
+        <Product key='4' data={data[3]} />
+        <Product key='5' data={data[4]} />
       </div>
       <div className="home_row">
-        <Product data={data[5]} />
+        <Product key='6' data={data[5]} />
       </div>
     </div>
   );

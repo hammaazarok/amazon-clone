@@ -8,6 +8,7 @@ import { auth } from "./firebase";
 import Header from "./Header";
 import Home from "./Home";
 import Login from "./Login";
+import Orders from "./Orders";
 import Payment from "./Payment";
 import { useStateValue } from "./StateProvider";
 
@@ -38,7 +39,7 @@ function App() {
             </>
           }
         ></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/login" element={<Login />}/>
         <Route
           path="/payment"
           element={
@@ -49,7 +50,16 @@ function App() {
               </Elements>
             </>
           }
-        ></Route>
+        />
+        <Route
+          path="/orders"
+          element={
+            <>
+              <Header />
+              <Orders />
+            </>
+          }
+        />
         <Route
           path="/"
           element={
@@ -58,7 +68,7 @@ function App() {
               <Home />
             </>
           }
-        ></Route>
+        />
       </Routes>
     </div>
   );
